@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gracie's Garden Mushrooms</title>
     <style>
         body {
@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
+            color: #333;
         }
         header {
             background-color: #3d653e;
@@ -29,51 +30,124 @@
             margin: 2em auto;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        section {
+            margin-bottom: 2em;
+        }
+        h1, h2, h3 {
+            color: #3d653e;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .product h3 {
+            margin: 0;
+            font-size: 1.1em;
+        }
+        .product input {
+            width: 60px;
+            padding: 0.3em;
+        }
+        .product button {
+            background-color: #3d653e;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #2e4f2e;
+        }
         footer {
             text-align: center;
             padding: 1em;
-            background-color: #3d653e;
-            color: white;
+            margin-top: 2em;
+        }
+        .social a {
+            margin: 0 0.5em;
+            color: #3d653e;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Gracie's Garden Mushrooms</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
+<header>
+    <h1>Gracie's Garden Mushrooms</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#order">Order</a>
+    </nav>
+</header>
+<main>
+    <section id="home">
         <h2>Welcome to Gracie's Garden</h2>
-        <p>
-            At Gracie's Garden, we cultivate delicious and nutritious mushrooms
-            right here in Gulf Breeze, Florida. Our urban farm focuses on sustainable
-            growing practices and provides fresh gourmet mushrooms to our
-            community. Whether you’re a chef looking for locally grown produce
-            or a home cook eager to try something new, our mushrooms bring a
-            unique flavor to every dish.
-        </p>
-        <p>
-            Explore our site to learn more about our story, our growing
-            practices, and how you can purchase our mushrooms.
-        </p>
-
-      <img src="gracies%20garden%20logo.jpeg" alt="Gracie's Garden Logo" style="max-width: 200px; display:block; margin:20px auto;">
-  <h3>Freshly harvested Golden Oyster mushrooms</h3>
-  <p>We harvest golden oyster mushrooms daily, offering 8&nbsp;oz portions for $7. Their delicate texture and mild flavour make them perfect for stir‑fries, soups and more.</p>
-  <h3>Discover Lion’s Mane mushrooms</h3>
-  <p>Lion’s Mane mushrooms are prized for their meaty texture and subtle seafood flavour. Add them to pasta dishes, sauté them as a steak alternative or brew your own adaptogenic tea.</p>
-  <h3>Experience our Pink, Blue & Italian Oyster mushrooms</h3>
-  <p>In addition to golden oysters, we grow vibrant pink and blue oyster mushrooms and robust Italian oysters—each with unique colors, textures and flavors.</p>
-  <p>We’re fully stocked and ready to serve you! Check our <a href="contact.html">Contact</a> page for pick‑up details or to ask about availability.</p>
+        <p>Discover our organic gourmet mushrooms grown with love and care.</p>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We cultivate Golden Oyster, Lion’s Mane, and Pink, Blue & Italian Oyster mushrooms. Our mushrooms are prized for their texture, flavour, and nutritional benefits. Add them to pastas, sautés, or enjoy as meat alternatives!</p>
+    </section>
+    <section id="order">
+        <h2>Order & Checkout</h2>
+        <p>We're fully stocked and ready to serve you! Use the form below to select your products and quantities. Your total will update automatically. When you're ready, click the button to pay via Venmo. After paying, please reach out via our <a href="contact.html">contact form</a> so we can confirm your order.</p>
+        <form id="orderForm">
+            <div class="product">
+                <h3>Golden Oyster (8 oz) - $7</h3>
+                <input type="number" id="qtyGolden" name="qtyGolden" min="0" value="0">
+            </div>
+            <div class="product">
+                <h3>Lion’s Mane (8 oz) - $9</h3>
+                <input type="number" id="qtyLions" name="qtyLions" min="0" value="0">
+            </div>
+            <div class="product">
+                <h3>Pink/Blue/Italian Oysters (8 oz) - $8</h3>
+                <input type="number" id="qtyMixed" name="qtyMixed" min="0" value="0">
+            </div>
+            <p id="totalAmount">Total: $0</p>
+            <button type="button" onclick="checkout()">Pay with Venmo</button>
+        </form>
+        <p>Prefer to scan? Use the QR code below to send payment via Venmo.</p>
+        <img src="qr.png" alt="Venmo QR Code" style="max-width:200px; display:block; margin: 1em auto;">
+    </section>
 </main>
-    <footer>
-  <p>&copy; 2025 Gracie's Garden Mushrooms. All rights reserved.</p>
-  <p>Follow us on <a href="https://facebook.com/" target="_blank">Facebook</a> and <a href="https://instagram.com/" target="_blank">Instagram</a>. Support us via <a href="https://venmo.com/" target="_blank">Venmo</a>.</p>
+<footer>
+    <p>© 2025 Gracie's Garden Mushrooms. All rights reserved.</p>
+    <p class="social">
+        Follow us on <a href="https://facebook.com">Facebook</a>, <a href="https://instagram.com">Instagram</a>. Support us via <a href="https://venmo.com">Venmo</a>.
+    </p>
 </footer>
-
+<script>
+function updateTotal() {
+    const qtyGolden = parseInt(document.getElementById('qtyGolden').value) || 0;
+    const qtyLions = parseInt(document.getElementById('qtyLions').value) || 0;
+    const qtyMixed = parseInt(document.getElementById('qtyMixed').value) || 0;
+    const total = qtyGolden * 7 + qtyLions * 9 + qtyMixed * 8;
+    document.getElementById('totalAmount').textContent = 'Total: $' + total;
+}
+function checkout() {
+    updateTotal();
+    const qtyGolden = parseInt(document.getElementById('qtyGolden').value) || 0;
+    const qtyLions = parseInt(document.getElementById('qtyLions').value) || 0;
+    const qtyMixed = parseInt(document.getElementById('qtyMixed').value) || 0;
+    const total = qtyGolden * 7 + qtyLions * 9 + qtyMixed * 8;
+    if (total <= 0) {
+        alert('Please select at least one product.');
+        return;
+    }
+    const note = encodeURIComponent('Gracie’s Garden order');
+    const venmoUrl = 'https://venmo.com?txn=pay&amount=' + total + '&note=' + note;
+    window.open(venmoUrl, '_blank');
+}
+document.querySelectorAll('#orderForm input[type="number"]').forEach(input => {
+    input.addEventListener('input', updateTotal);
+});
+</script>
 </body>
 </html>
