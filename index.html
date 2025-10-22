@@ -74,6 +74,32 @@
             color: #3d653e;
             text-decoration: none;
         }
+
+        /* Added styles for product images and captions */
+        .product img {
+            max-width: 260px;
+            height: auto;
+            margin-right: 1em;
+        }
+        .caption {
+            font-size: 0.8em;
+            text-align: center;
+            color: #666;
+        }
+        @media (max-width: 600px) {
+            .product {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .product img {
+                margin-right: 0;
+                margin-bottom: 0.5em;
+                width: 100%;
+            }
+            .caption {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -121,6 +147,15 @@
                 <h3>Lion’s Mane (Dehydrated, 1 oz) - $14</h3>
                 <input type="number" id="qtyLionsDehydOne" name="qtyLionsDehydOne" min="0" value="0">
             </div>
+            <!-- New product: Lion's Mane Powder (1 oz, $15) with image and caption -->
+            <div class="product">
+                <img src="assets/images/lions-mane-powder-1oz.webp" alt="Lion’s Mane powder — 1 oz" loading="lazy" width="260" height="505">
+                <div style="flex:1;">
+                    <h3>Lion’s Mane Powder (1 oz) - $15</h3>
+                    <p class="caption">Freshly made Lion’s Mane powder — 1 oz · $15</p>
+                    <input type="number" id="qtyLionsPowder" name="qtyLionsPowder" min="0" value="0">
+                </div>
+            </div>
             <!-- Oyster varieties -->
             <div class="product">
                 <h3>Golden Oyster (8 oz) - $7</h3>
@@ -165,6 +200,7 @@ function updateTotal() {
     const qtyLionsFresh = parseInt(document.getElementById('qtyLionsFresh').value) || 0;
     const qtyLionsDehydHalf = parseInt(document.getElementById('qtyLionsDehydHalf').value) || 0;
     const qtyLionsDehydOne = parseInt(document.getElementById('qtyLionsDehydOne').value) || 0;
+    const qtyLionsPowder = parseInt(document.getElementById('qtyLionsPowder').value) || 0;
     const qtyGolden = parseInt(document.getElementById('qtyGolden').value) || 0;
     const qtyItalian = parseInt(document.getElementById('qtyItalian').value) || 0;
     const qtyBlue = parseInt(document.getElementById('qtyBlue').value) || 0;
@@ -175,6 +211,7 @@ function updateTotal() {
         qtyLionsFresh * 10 +
         qtyLionsDehydHalf * 7 +
         qtyLionsDehydOne * 14 +
+        qtyLionsPowder * 15 +
         qtyGolden * 7 +
         qtyItalian * 7 +
         qtyBlue * 7 +
@@ -188,6 +225,7 @@ function checkout() {
     const qtyLionsFresh = parseInt(document.getElementById('qtyLionsFresh').value) || 0;
     const qtyLionsDehydHalf = parseInt(document.getElementById('qtyLionsDehydHalf').value) || 0;
     const qtyLionsDehydOne = parseInt(document.getElementById('qtyLionsDehydOne').value) || 0;
+    const qtyLionsPowder = parseInt(document.getElementById('qtyLionsPowder').value) || 0;
     const qtyGolden = parseInt(document.getElementById('qtyGolden').value) || 0;
     const qtyItalian = parseInt(document.getElementById('qtyItalian').value) || 0;
     const qtyBlue = parseInt(document.getElementById('qtyBlue').value) || 0;
@@ -198,6 +236,7 @@ function checkout() {
         qtyLionsFresh * 10 +
         qtyLionsDehydHalf * 7 +
         qtyLionsDehydOne * 14 +
+        qtyLionsPowder * 15 +
         qtyGolden * 7 +
         qtyItalian * 7 +
         qtyBlue * 7 +
