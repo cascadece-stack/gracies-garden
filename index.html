@@ -1,4 +1,4 @@
-e<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -164,9 +164,14 @@ e<!DOCTYPE html>
                 <h3>Lion’s Mane (Dehydrated, 0.5 oz) - $7</h3>
                 <input type="number" id="qtyLionsDehydHalf" name="qtyLionsDehydHalf" min="0" value="0">
             </div>
+            <!-- Lion's Mane Dehydrated 1 oz with image #17 -->
             <div class="product">
-                <h3>Lion’s Mane (Dehydrated, 1 oz) - $14</h3>
-                <input type="number" id="qtyLionsDehydOne" name="qtyLionsDehydOne" min="0" value="0">
+                <img src="assets/images/lions-mane-dehydrated-1oz.jpeg" alt="Dehydrated Lion’s Mane — 1 oz" loading="lazy" width="260" height="505">
+                <div style="flex:1;">
+                    <h3>Lion’s Mane (Dehydrated, 1 oz) - $14</h3>
+                    <p class="caption">Dehydrated Lion’s Mane — 1 oz · $14</p>
+                    <input type="number" id="qtyLionsDehydOne" name="qtyLionsDehydOne" min="0" value="0">
+                </div>
             </div>
             <!-- New product: Lion's Mane Powder (1 oz, $15) with image and caption -->
             <div class="product">
@@ -182,13 +187,23 @@ e<!DOCTYPE html>
                 <h3>Golden Oyster (8 oz) - $7</h3>
                 <input type="number" id="qtyGolden" name="qtyGolden" min="0" value="0">
             </div>
+            <!-- Italian Oyster with image #19 -->
             <div class="product">
-                <h3>Italian Oyster (8 oz) - $7</h3>
-                <input type="number" id="qtyItalian" name="qtyItalian" min="0" value="0">
+                <img src="assets/images/italian-oyster-8oz.jpeg" alt="Italian oyster — 8 oz" loading="lazy" width="260" height="505">
+                <div style="flex:1;">
+                    <h3>Italian Oyster (8 oz) - $7</h3>
+                    <p class="caption">Italian Oyster — 8 oz · $7</p>
+                    <input type="number" id="qtyItalian" name="qtyItalian" min="0" value="0">
+                </div>
             </div>
+            <!-- Blue Oyster with image #16 -->
             <div class="product">
-                <h3>Blue Oyster (8 oz) - $7</h3>
-                <input type="number" id="qtyBlue" name="qtyBlue" min="0" value="0">
+                <img src="assets/images/blue-oyster-8oz.jpeg" alt="Blue oyster — 8 oz" loading="lazy" width="260" height="505">
+                <div style="flex:1;">
+                    <h3>Blue Oyster (8 oz) - $7</h3>
+                    <p class="caption">Blue Oyster — 8 oz · $7</p>
+                    <input type="number" id="qtyBlue" name="qtyBlue" min="0" value="0">
+                </div>
             </div>
             <div class="product">
                 <h3>Pink Oyster (8 oz) - $7</h3>
@@ -199,9 +214,14 @@ e<!DOCTYPE html>
                 <h3>Oyster Mushrooms (Dehydrated, 0.5 oz) - $5</h3>
                 <input type="number" id="qtyOysterDehydHalf" name="qtyOysterDehydHalf" min="0" value="0">
             </div>
+            <!-- Oyster Mushrooms Dehydrated 1 oz with image #12 -->
             <div class="product">
-                <h3>Oyster Mushrooms (Dehydrated, 1 oz) - $10</h3>
-                <input type="number" id="qtyOysterDehydOne" name="qtyOysterDehydOne" min="0" value="0">
+                <img src="assets/images/oyster-dehydrated-1oz.jpg" alt="Dehydrated oyster mushrooms — 1 oz" loading="lazy" width="260" height="505">
+                <div style="flex:1;">
+                    <h3>Oyster Mushrooms (Dehydrated, 1 oz) - $10</h3>
+                    <p class="caption">Dehydrated oyster mushrooms — 1 oz · $10</p>
+                    <input type="number" id="qtyOysterDehydOne" name="qtyOysterDehydOne" min="0" value="0">
+                </div>
             </div>
             <p id="totalAmount">Total: $0</p>
             <button type="button" onclick="checkout()">Pay with Venmo</button>
