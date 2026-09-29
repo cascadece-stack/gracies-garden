@@ -1,302 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gracie's Garden Mushrooms</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        header {
-                background-image: url('assets/images/header-mushroom-display.webp');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 1em 2em;
-                    min-height: 300px;
-        }
-        nav a {
-            color: white;
-            margin-right: 1em;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            padding: 2em;
-            background-color: white;
-            max-width: 800px;
-            margin: 2em auto;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        section {
-            margin-bottom: 2em;
-        }
-        h1, h2, h3 {
-            color: #3d653e;
-        }
-        .product {
-            border: 1px solid #ddd;
-            padding: 1em;
-            margin-bottom: 1em;
-            border-radius: 4px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .product h3 {
-            margin: 0;
-            font-size: 1.1em;
-        }
-        .product input {
-            width: 60px;
-            padding: 0.3em;
-        }
-        .product button {
-            background-color: #3d653e;
-            color: white;
-            border: none;
-            padding: 0.5em 1em;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .product button:hover {
-            background-color: #2e4f2e;
-        }
-        footer {
-            text-align: center;
-            padding: 1em;
-            margin-top: 2em;
-        }
-        .social a {
-            margin: 0 0.5em;
-            color: #3d653e;
-            text-decoration: none;
-        }
-
-        /* Added styles for product images and captions */
-        .product img {
-            max-width: 260px;
-            height: auto;
-            margin-right: 1em;
-        }
-        .caption {
-            font-size: 0.8em;
-            text-align: center;
-            color: #666;
-        }
-        @media (max-width: 600px) {
-            .product {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .product img {
-                margin-right: 0;
-                margin-bottom: 0.5em;
-                width: 100%;
-            }
-            .caption {
-                text-align: center;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracie's Garden Mushrooms</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; color: #333; line-height: 1.6; }
+    header { background-image: linear-gradient(rgba(0,0,0,.28),rgba(0,0,0,.28)), url('assets/images/header-mushroom-display.webp'); background-size: cover; background-position: center; color: white; padding: 1.25em 2em; min-height: 300px; }
+    header h1 { color: white; text-shadow: 0 2px 5px rgba(0,0,0,.45); }
+    nav a { color: white; margin-right: 1em; text-decoration: none; font-weight: bold; }
+    main { padding: 2em; background: white; max-width: 850px; margin: 2em auto; box-shadow: 0 0 10px rgba(0,0,0,.1); }
+    section { margin-bottom: 2.25em; }
+    h1, h2, h3 { color: #3d653e; }
+    .notice { background: #f1f6ef; border: 1px solid #c9d9c5; border-radius: 8px; padding: 1.2em 1.4em; text-align: center; }
+    .notice h2 { margin-top: 0; }
+    .button { display: inline-block; background: #3d653e; color: white; text-decoration: none; font-weight: bold; padding: .75em 1.2em; border-radius: 6px; margin: .35em; }
+    .button:hover { background: #2e4f2e; }
+    .button.secondary { background: #667566; }
+    .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; }
+    .photos img { width: 100%; height: auto; border-radius: 6px; }
+    .contact-box { text-align: center; padding: 1.25em; border-top: 1px solid #ddd; }
+    footer { text-align: center; padding: 1.5em; margin-top: 2em; color: #555; }
+    @media (max-width: 600px) { main { margin: 0; padding: 1.25em; } header { min-height: 240px; padding: 1em; } nav a { display: inline-block; margin-bottom: .5em; } .photos { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 <header>
-
-    <h1>Gracie's Garden Mushrooms</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#mushroom-of-the-month">Mushroom of the Month</a>
-             <a href="#order">Order</a>
-            <a href="contact.html">Contact</a>
-    </nav>
+  <h1>Gracie's Garden Mushrooms</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#mushroom-of-the-month">Mushroom of the Month</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 <main>
-    <section id="home">
-        <h2>Welcome to Gracie's Garden</h2>
-        <p>Discover our All Natural
-            gourmet mushrooms grown with love and care.</p>
-    </section>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We cultivate Golden Oyster, Lion’s Mane, and Pink, Blue & Italian Oyster mushrooms. Our mushrooms are prized for their texture, flavour, and nutritional benefits. Add them to pastas, sautés, or enjoy as meat alternatives!</p>
-    </section>
-  
-
-    <!-- Mushroom of the Month placed before order -->
-    <section id="mushroom-of-the-month">
-    <h2>Mushroom of the Month</h2>
-    <h3>Lion’s Mane</h3>
-    <p>
-        Lion’s Mane (Hericium erinaceus) is a distinctive white, shaggy mushroom known for its unique appearance and delicious flavor.
-        Often found growing on hardwood trees, it’s a prized find for foragers.
-        This mushroom is not only valued for its mild, seafood-like taste but also for its potential cognitive benefits.
-        Fun fact: Lion’s Mane has been used in traditional Chinese medicine for centuries and is a favorite among wild mushroom hunters.
-    </p>
-    <div class="photos">
-        <img src="assets/images/lions-mane-fresh.jpg"
-             alt="Fresh Lion’s Mane mushroom in our grow room"
-             style="width: 100%; height: auto; margin-bottom: 1em;">
-        <img src="assets/images/lions-mane-packaged.jpg"
-             alt="Packaged Lion’s Mane mushroom products"
-             style="width: 100%; height: auto;">
-    </div>
-    <p>
-        Try this simple Lion’s Mane recipe: <strong>Lion’s Mane Sauté</strong>.
-        Tear the mushroom into bite-sized pieces, heat a pan with a bit of butter or oil, and sauté until golden brown.
-        Add garlic, a splash of soy sauce, and fresh herbs to taste. Enjoy as a savory side or a topping for toast!
-    </p>
-</section>
-     
-
-     <form id="orderForm">
-            <!-- Lion's Mane products -->
-            <div class="product">
-                <h3>Lion’s Mane (Fresh, 8 oz) - $10</h3>
-                <input type="number" id="qtyLionsFresh" name="qtyLionsFresh" min="0" value="0">
-            </div>
-            <div class="product">
-                <h3>Lion’s Mane (Dehydrated, 0.5 oz) - $7</h3>
-                <input type="number" id="qtyLionsDehydHalf" name="qtyLionsDehydHalf" min="0" value="0">
-            </div>
-            <!-- Lion's Mane Dehydrated 1 oz with image #17 -->
-            <div class="product">
-                <img src="assets/images/lions-mane-dehydrated-1oz.jpeg" alt="Dehydrated Lion’s Mane — 1 oz" loading="lazy" width="260" height="505">
-                <div style="flex:1;">
-                    <h3>Lion’s Mane (Dehydrated, 1 oz) - $14</h3>
-                    <p class="caption">Dehydrated Lion’s Mane — 1 oz · $14</p>
-                    <input type="number" id="qtyLionsDehydOne" name="qtyLionsDehydOne" min="0" value="0">
-                </div>
-            </div>
-            <!-- New product: Lion's Mane Powder (1 oz, $13) with image and caption -->
-            <div class="product">
-                <img src="assets/images/lions-mane-powder-1oz.webp" alt="Lion’s Mane powder — 1 oz" loading="lazy" width="260" height="505">
-                <div style="flex:1;">
-                    <h3>Lion’s Mane Powder (1 oz) - $15</h3113
-                    <p class="caption">Freshly made Lion’s Mane powder — 1 oz · $13</3>
-                    <input type="number" id="qtyLionsPowder" name="qtyLionsPowder" min="0" value="0">
-                </div>
-            </div13
-            <!-- Oyster varieties -->
-            <div class="product">
-                <h3>Golden Oyster (8 oz) - $7</h3>
-                <input type="number" id="qtyGolden" name="qtyGolden" min="0" value="0">
-            </div>
-            <!-- Italian Oyster with image #19 -->
-            <div class="product">
-                <img src="assets/images/italian-oyster-8oz.jpeg" alt="Italian oyster — 8 oz" loading="lazy" width="260" height="505">
-                <div style="flex:1;">
-                    <h3>Italian Oyster (8 oz) - $7</h3>
-                    <p class="caption">Italian Oyster — 8 oz · $7</p>
-                    <input type="number" id="qtyItalian" name="qtyItalian" min="0" value="0">
-                </div>
-            </div>
-            <!-- Blue Oyster with image #16 -->
-            <div class="product">
-                <img src="assets/images/blue-oyster-8oz.jpeg" alt="Blue oyster — 8 oz" loading="lazy" width="260" height="505">
-                <div style="flex:1;">
-                    <h3>Blue Oyster (8 oz) - $7</h3>
-                    <p class="caption">Blue Oyster — 8 oz · $7</p>
-                    <input type="number" id="qtyBlue" name="qtyBlue" min="0" value="0">
-                </div>
-            </div>
-            <div class="product">
-                <h3>Pink Oyster (8 oz) - $7</h3>
-                <input type="number" id="qtyPink" name="qtyPink" min="0" value="0">
-            </div>
-            <!-- Dehydrated oyster options -->
-            <div class="product">
-                <h3>Oyster Mushrooms (Dehydrated, 0.5 oz) - $5</h3>
-                <input type="number" id="qtyOysterDehydHalf" name="qtyOysterDehydHalf" min="0" value="0">
-            </div>
-            <!-- Oyster Mushrooms Dehydrated 1 oz with image #12 -->
-            <div class="product">
-                <img src="assets/images/oyster-dehydrated-1oz.jpg" alt="Dehydrated oyster mushrooms — 1 oz" loading="lazy" width="260" height="505">
-                <div style="flex:1;">
-                    <h3>Oyster Mushrooms (Dehydrated, 1 oz) - $10</h3>
-                    <p class="caption">Dehydrated oyster mushrooms — 1 oz · $10</p>
-                    <input type="number" id="qtyOysterDehydOne" name="qtyOysterDehydOne" min="0" value="0">
-                </div>
-            </div>
-            <p id="totalAmount">Total: $0</p>
-            <button type="button" onclick="checkout()">Pay with Venmo</button>
-        </form>
-        <p>Prefer to scan? Use the QR code below to send payment via Venmo.</p>
-        <img src="qr.png" alt="Venmo QR Code" style="max-width:200px; display:block; margin: 1em auto;">
-    </section>
+  <section class="notice">
+    <h2>We're growing something good.</h2>
+    <p><strong>Our website is currently under construction — please bear with us.</strong></p>
+    <p>Gracie's Garden is busy behind the scenes refining our mushroom products and getting ready for our next growing season. Online ordering is temporarily paused, but we'd still love to hear from you.</p>
+    <a class="button" href="sms:+18503246030">Message Gracie's Garden</a>
+    <a class="button secondary" href="mailto:graciesgarden411@gmail.com">Email Us</a>
+  </section>
+  <section id="home"><h2>Welcome to Gracie's Garden</h2><p>Discover our all-natural gourmet mushrooms, grown with love and care.</p></section>
+  <section id="about"><h2>About Us</h2><p>We cultivate Golden Oyster, Lion's Mane, and Pink, Blue &amp; Italian Oyster mushrooms. Our mushrooms are prized for their texture and flavor. Add them to pastas and sautés, or enjoy them as a delicious meat alternative.</p></section>
+  <section id="mushroom-of-the-month">
+    <h2>Mushroom of the Month</h2><h3>Lion's Mane</h3>
+    <p>Lion's Mane (<em>Hericium erinaceus</em>) is a distinctive white, shaggy mushroom known for its unique appearance and delicious flavor. Its mild, seafood-like taste makes it a favorite in the kitchen.</p>
+    <div class="photos"><img src="assets/images/lions-mane-fresh.jpg" alt="Fresh Lion's Mane mushroom in our grow room"><img src="assets/images/lions-mane-packaged.jpg" alt="Packaged Lion's Mane mushroom products"></div>
+    <p><strong>Simple Lion's Mane sauté:</strong> Tear the mushroom into bite-sized pieces, heat a pan with a little butter or oil, and sauté until golden brown. Add garlic, a splash of soy sauce, and fresh herbs to taste.</p>
+  </section>
+  <section id="contact" class="contact-box">
+    <h2>Stay in Touch</h2><p>Interested in fresh mushrooms or curious about what we're working on? Send us a message. We're happy to hear from you while we prepare to resume production.</p>
+    <a class="button" href="sms:+18503246030">Message Us</a><a class="button secondary" href="contact.html">More Contact Options</a>
+  </section>
 </main>
-<footer>
-    <p>© 2025 Gracie's Garden Mushrooms. All rights reserved.</p>
-    <p class="social">
-        Follow us on <a href="https://facebook.com">Facebook</a>, <a href="https://instagram.com">Instagram</a>. Support us via <a href="https://venmo.com">Venmo</a>.
-    </p>
-</footer>
-<script>
-function updateTotal() {
-    const qtyLionsFresh = parseInt(document.getElementById('qtyLionsFresh').value) || 0;
-    const qtyLionsDehydHalf = parseInt(document.getElementById('qtyLionsDehydHalf').value) || 0;
-    const qtyLionsDehydOne = parseInt(document.getElementById('qtyLionsDehydOne').value) || 0;
-    const qtyLionsPowder = parseInt(document.getElementById('qtyLionsPowder').value) || 0;
-    const qtyGolden = parseInt(document.getElementById('qtyGolden').value) || 0;
-    const qtyItalian = parseInt(document.getElementById('qtyItalian').value) || 0;
-    const qtyBlue = parseInt(document.getElementById('qtyBlue').value) || 0;
-    const qtyPink = parseInt(document.getElementById('qtyPink').value) || 0;
-    const qtyOysterDehydHalf = parseInt(document.getElementById('qtyOysterDehydHalf').value) || 0;
-    const qtyOysterDehydOne = parseInt(document.getElementById('qtyOysterDehydOne').value) || 0;
-    const total =
-        qtyLionsFresh * 10 +
-        qtyLionsDehydHalf * 7 +
-        qtyLionsDehydOne * 14 +
-        qtyLionsPowder * 13 +
-        qtyGolden * 7 +
-        qtyItalian * 7 +
-        qtyBlue * 7 +
-        qtyPink * 7 +
-        qtyOysterDehydHalf * 5 +
-        qtyOysterDehydOne * 10;
-    document.getElementById('totalAmount').textContent = 'Total: $' + total;
-}
-function checkout() {
-    updateTotal();
-    const qtyLionsFresh = parseInt(document.getElementById('qtyLionsFresh').value) || 0;
-    const qtyLionsDehydHalf = parseInt(document.getElementById('qtyLionsDehydHalf').value) || 0;
-    const qtyLionsDehydOne = parseInt(document.getElementById('qtyLionsDehydOne').value) || 0;
-    const qtyLionsPowder = parseInt(document.getElementById('qtyLionsPowder').value) || 0;
-    const qtyGolden = parseInt(document.getElementById('qtyGolden').value) || 0;
-    const qtyItalian = parseInt(document.getElementById('qtyItalian').value) || 0;
-    const qtyBlue = parseInt(document.getElementById('qtyBlue').value) || 0;
-    const qtyPink = parseInt(document.getElementById('qtyPink').value) || 0;
-    const qtyOysterDehydHalf = parseInt(document.getElementById('qtyOysterDehydHalf').value) || 0;
-    const qtyOysterDehydOne = parseInt(document.getElementById('qtyOysterDehydOne').value) || 0;
-    const total =
-        qtyLionsFresh * 10 +
-        qtyLionsDehydHalf * 7 +
-        qtyLionsDehydOne * 14 +
-        qtyLionsPowder * 13 +
-        qtyGolden * 7 +
-        qtyItalian * 7 +
-        qtyBlue * 7 +
-        qtyPink * 7 +
-        qtyOysterDehydHalf * 5 +
-        qtyOysterDehydOne * 10;
-    if (total <= 0) {
-        alert('Please select at least one product.');
-        return;
-    }
-    const note = encodeURIComponent('Gracie’s Garden order');
-    const venmoUrl = 'https://venmo.com?txn=pay&amount=' + total + '&note=' + note;
-    window.open(venmoUrl, '_blank');
-}
-// Attach listeners to all number inputs to update totals on the fly
-document.querySelectorAll('#orderForm input[type="number"]').forEach(input => {
-    input.addEventListener('input', updateTotal);
-});
-</script>
+<footer><p>© 2026 Gracie's Garden Mushrooms. All rights reserved.</p></footer>
 </body>
 </html>
